@@ -45,9 +45,7 @@ public class InventoryController {
                 this.almacenRepo = almacenRepo;
         }
 
-        // =====================================================
         // GET: Consultar inventario por almacén
-        // =====================================================
         @Operation(summary = "Consultar inventario por almacén", description = "Obtiene todos los productos y sus cantidades en stock para un almacén específico. "
                         +
                         "Se requiere el header X-API-Version con valor 'v1'.")
@@ -104,9 +102,7 @@ public class InventoryController {
                 return ResponseEntity.ok(responseList);
         }
 
-        // =====================================================
         // POST: Registrar producto + inventario
-        // =====================================================
         @Operation(summary = "Registrar nuevo producto en inventario", description = "Crea un nuevo producto y lo registra en el inventario de un almacén específico con su cantidad inicial en stock. "
                         +
                         "Se requiere el header X-API-Version con valor 'v1'.")

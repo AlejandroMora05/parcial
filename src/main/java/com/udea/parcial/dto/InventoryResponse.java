@@ -20,7 +20,6 @@ public class InventoryResponse {
 
     public InventoryResponse() {}
 
-    // ===== Getters y Setters =====
 
     public Long getInventoryId() {
         return inventoryId;

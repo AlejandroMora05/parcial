@@ -26,9 +26,6 @@ public class InventoryServiceImpl implements InventoryService {
         this.almacenRepo = almacenRepo;
     }
 
-    // =====================================================
-    // GET inventario por almacén
-    // =====================================================
     @Override
     public List<InventoryResponse> getInventoryByAlmacen(Long almacenId) {
 
@@ -51,9 +48,6 @@ public class InventoryServiceImpl implements InventoryService {
     }
 
 
-    // =====================================================
-    // POST crear inventario + producto
-    // =====================================================
     @Override
     public InventoryResponse createInventory(InventoryRequest request) {
 

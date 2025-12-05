@@ -10,23 +10,18 @@ public class Almacen {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Nombre del almacén o sede
     @Column(nullable = false, length = 100)
     private String nombre;
 
-    // Ciudad del almacén
     @Column(nullable = false, length = 100)
     private String ciudad;
 
-    // Dirección (opcional)
     @Column(length = 200)
     private String direccion;
 
-    // Teléfono (opcional)
     @Column(length = 20)
     private String telefono;
 
-    // ===== Constructores =====
     public Almacen() {
     }
 
@@ -37,7 +32,6 @@ public class Almacen {
         this.telefono = telefono;
     }
 
-    // ===== Getters y Setters =====
     public Long getId() {
         return id;
     }
@@ -74,7 +68,6 @@ public class Almacen {
         this.telefono = telefono;
     }
 
-    // ===== equals y hashCode =====
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

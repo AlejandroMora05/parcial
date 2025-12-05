@@ -11,23 +11,18 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Nombre del producto
     @Column(nullable = false, length = 100)
     private String name;
 
-    // Código SKU opcional
     @Column(length = 50, unique = true)
     private String sku;
 
-    // Descripción del producto
     @Column(length = 500)
     private String description;
 
-    // Precio de referencia (opcional)
     @Column(precision = 10, scale = 2)
     private BigDecimal price;
 
-    // ===== Constructores =====
     public Product() {}
 
     public Product(String name, String sku, String description, BigDecimal price) {
@@ -37,7 +32,6 @@ public class Product {
         this.price = price;
     }
 
-    // ===== Getters y Setters =====
     public Long getId() {
         return id;
     }
@@ -74,7 +68,6 @@ public class Product {
         this.price = price;
     }
 
-    // ===== equals y hashCode =====
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

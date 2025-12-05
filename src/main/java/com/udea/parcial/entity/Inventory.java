@@ -11,24 +11,19 @@ public class Inventory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Relación con Almacen
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "almacen_id", nullable = false)
     private Almacen almacen;
 
-    // Relación con Product
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "producto_id", nullable = false)
     private Product product;
 
-    // Stock disponible en esta sede
     @Column(nullable = false)
     private int stock;
 
-    // Última actualización
     private LocalDateTime lastUpdated;
 
-    // ===== Constructores =====
     public Inventory() {}
 
     public Inventory(Almacen almacen, Product product, int stock) {
@@ -38,7 +33,6 @@ public class Inventory {
         this.lastUpdated = LocalDateTime.now();
     }
 
-    // ===== Getters y Setters =====
     public Long getId() {
         return id;
     }
@@ -76,7 +70,6 @@ public class Inventory {
         this.lastUpdated = lastUpdated;
     }
 
-    // ===== equals y hashCode =====
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

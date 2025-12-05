@@ -6,9 +6,9 @@ services:
     image: postgres:15-alpine
     container_name: parcial-postgres
     environment:
-      POSTGRES_DB: inventario_db
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: inventario_arquisoft
+      POSTGRES_USER: neondb_owner
+      POSTGRES_PASSWORD: npg_J7BG9znvDouy
     ports:
       - "5432:5432"
     volumes:
@@ -31,9 +31,9 @@ services:
     ports:
       - "8080:8080"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/inventario_db
-      SPRING_DATASOURCE_USERNAME: admin
-      SPRING_DATASOURCE_PASSWORD: admin123
+      SPRING_DATASOURCE_URL: jdbc:postgresql://ep-billowing-tree-a4gy85bw-pooler.us-east-1.aws.neon.tech:5432/neondb?sslmode=require
+      SPRING_DATASOURCE_USERNAME: neondb_owner
+      SPRING_DATASOURCE_PASSWORD: npg_J7BG9znvDouy
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_JPA_SHOW_SQL: "true"
       SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL: "true"

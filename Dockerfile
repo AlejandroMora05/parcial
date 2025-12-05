@@ -8,6 +8,6 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 
-COPY --from=build /app/target/Parcial.jar Parcial.jar
+COPY --from=build /app/target/parcial-0.0.1-SNAPSHOT.jar parcial.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","Parcial.jar"]
+ENTRYPOINT ["java","-jar","parcial.jar"]
